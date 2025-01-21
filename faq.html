@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawPals - FAQ</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #ffe2e6; /* Set the background color */
+        }
+
+        .faq-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .faq-item {
+    margin-bottom: 15px;
+    cursor: pointer;
+    padding: 20px; /* Increase padding for more space */
+    background-color: #ffffff; /* Default background color */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+    font-size: 18px; /* Increase font size for better readability */
+}
+
+.faq-item:hover {
+    background-color: #ff843d; /* Color when the cursor is on the box */
+    color: white; /* Text color change on hover */
+}
+
+.faq-item:active {
+    background-color: white; /* Color when clicked */
+    color: #333; /* Text color remains black or any other color you prefer */
+}
+
+
+        .faq-answer {
+            display: none;
+            margin-top: 5px;
+            padding: 10px;
+            background-color: white; /* White background for the answer */
+            color: #333; /* Text color */
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for better visibility */
+        }
+
+        .faq-image {
+            width: 30%; /* Adjust the width of the image */
+            max-width: 400px;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo" style="font-family: 'More Sugar', cursive;">PawPals</div>
+        <div class="tagline">Love is just a paw away</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#about">About Us</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="faq.html" class="sign-in">FAQ</a>
+        </nav>
+    </header>
+
+    <!-- FAQ Section -->
+    <main>
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-container">
+                <!-- FAQ Items -->
+                <div class="faq-items">
+                    <!-- Question 1 -->
+                    <div class="faq-item">
+                        <h3>How do I adopt a pet from PawPals?</h3>
+                        <p class="faq-answer">Simply visit the pet listings section, choose a pet, and follow the adoption process steps. You will need to fill out an adoption form and schedule a meeting with the pet.</p>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="faq-item">
+                        <h3>Is there an adoption fee?</h3>
+                        <p class="faq-answer">Yes, we have a small adoption fee to cover the costs of veterinary care and other expenses. The fee varies depending on the animal.</p>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="faq-item">
+                        <h3>Can I foster a pet?</h3>
+                        <p class="faq-answer">Yes, you can foster a pet! We encourage fostering as it helps prepare pets for adoption and gives them a loving environment.</p>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="faq-item">
+                        <h3>What should I do if I want to help PawPals?</h3>
+                        <p class="faq-answer">You can volunteer, donate, or even become a foster parent! Every little bit helps the animals in need.</p>
+                    </div>
+                </div>
+
+                <!-- Image Section -->
+                <div class="faq-image">
+                    <img src="images/fapng" alt="FAQ Image">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="contact-info">
+            <p><strong>Phone:</strong> <a href="tel:9307134225">9307134225</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@pawpals.com">info@pawpals.com</a></p>
+            <p><strong>Available Anytime:</strong> 24/7 Support</p>
+        </div>
+        
+        <div class="social-links">
+            <h3>Follow Us</h3>
+            <a href="https://www.facebook.com/yourpage" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/yourpage" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/yourpage" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/yourpage" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        </div>
+        
+        <p>&copy; 2024 PawPals. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Get all the FAQ items
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        // Add a click event listener to each FAQ item
+        faqItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.querySelector('.faq-answer');
+
+                // Toggle the visibility of the answer
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                } else {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

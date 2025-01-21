@@ -1,0 +1,660 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #d63384;
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd1dc;
+}
+
+.sign-in {
+    background-color: white;
+    color: #d63384;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid #d63384;
+}
+
+.sign-in:hover {
+    background-color: #f8e1e8;
+    color: #d63384;
+}
+
+.donate {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.donate:hover {
+    background-color: #e55b50;
+}
+
+/* Button for "List Pet" in the header */
+.list-pet-btn {
+    background-color: #e7683a; /* Button background color */
+    color: white; /* Text color */
+    padding: 12px 30px; /* Padding to increase the size */
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    border-radius: 25px; /* Makes the button more rounded */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Align it inline */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Hover effect for the button */
+.list-pet-btn:hover {
+    background-color: #d45e2a; /* Darken button color on hover */
+}
+
+
+/* Main Content Styles */
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.left-content {
+    max-width: 50%;
+}
+
+.search-bar {
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    padding: 15px 15px 15px 50px;
+    font-size: 18px;
+    width: 100%;
+    border: 2px solid #ff6f61;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-bar input:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar .paw-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #ff6f61;
+}
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 35px;
+}
+
+.categories a {
+    background-color: #ffe9d5;
+    color: rgb(63, 79, 100);
+    padding: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+/* Available Pets Section */
+.available-pets {
+    padding: 30px;
+    background-color: #f6c8d8;
+}
+
+.available-pets h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.pet-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.pet-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+}
+
+.pet-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.more-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.more-button {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.more-button:hover {
+    background-color: #b82b63;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 30px;
+    background-color: #ffeef5;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column; /* Keep it a single column layout */
+    align-items: flex-start; /* Ensure left alignment */
+    background-image: url('images/bg2.png'); /* Replace with the path to your image */
+    background-size: cover; /* Makes the background cover the whole section */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.about-us h2 {
+    font-family: 'Chewy', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #e7683a;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow for floating effect */
+    transform: translateY(-10px); /* Move the heading slightly upwards */
+    position: relative; /* Keep it in the flow, but add space around */
+    text-align: left; /* Ensure the text is aligned left */
+}
+
+.about-us p {
+    text-align: left; /* Ensure paragraph text is left-aligned */
+}
+/* Support Us Section */
+/* Support Us Section */
+.support-background {
+    background-image: url('images/d.png'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+}
+
+.support-container {
+    display: flex;
+    align-items: flex-start; /* Align the text and QR code at the top */
+    gap: 20px; /* Add space between text and QR code */
+}
+
+.support-us {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.support-content {
+    flex: 1; /* Allow text to take the remaining space */
+    max-width: 60%; /* Optional: restrict text width */
+    text-align: left; /* Ensure text alignment */
+}
+
+.support-content h2 {
+    font-family: 'Chewy', cursive;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #ff713e;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Light shadow for floating effect */
+}
+
+.support-content p {
+    margin: 10px 0; /* Add spacing between paragraphs */
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.6; /* Improve readability */
+}
+
+.qr-code {
+    flex-shrink: 0; /* Prevent the QR code from resizing */
+    text-align: right; /* Center QR code within its container */
+    position: sticky; /* Make the QR code sticky */
+    top: 20px; /* Distance from the top of the viewport */
+}
+
+.qr-code img {
+    max-width: 150px; /* Adjust QR code size */
+    height: auto;
+    border-radius: 10px;
+}
+
+
+
+
+
+/* Footer Styles */
+footer {
+    padding: 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: #7b7b7b;
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #d63384;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #d63384;
+}
+
+.modal-body {
+    margin-top: 20px;
+}
+
+#initialOptions {
+    text-align: center;
+}
+
+.modal-btn {
+    background-color: #e7683a;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: calc(100% - 24px);
+}
+
+.modal-btn:hover {
+    background-color: #d16993;
+}
+
+.modal-input {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+}
+
+.form-section {
+    text-align: center;
+}
+/* Create Account Header */
+.create-account-header {
+    position: relative;
+    width: 100%;
+    height: 40vh; /* Adjust height as needed */
+    background-color: #f3a1caf7; /* Ensure contrast for text visibility */
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-account-header img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5; /* Adjust for text readability */
+}
+
+.create-account-header h1 {
+    position: relative;
+    font-size: 3rem;
+    z-index: 1;
+    color: #fff; /* Ensure the text is visible over the background */
+}
+
+/* Create Account Form */
+.create-account-form {
+    max-width: 1200px; /* Adjust width */
+    margin: 100px auto; /* Center the form */
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Flexbox layout for form */
+.create-account-form form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Form Group for Left and Right Columns */
+.form-group {
+    display: flex;
+    gap: 20px; /* Space between columns */
+}
+
+/* Columns */
+.left-column, .right-column {
+    flex: 1; /* Each column takes up equal space */
+    min-width: 0; /* Remove any minimum width constraints */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Full-width fields */
+.full-width {
+    flex-basis: 100%; /* Full width of the container */
+}
+
+/* Form label styling */
+.create-account-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Form input elements styling */
+.create-account-form input,
+.create-account-form select,
+.create-account-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%; /* Full width within the column */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Button styling */
+.create-account-form button {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Full width within the column */
+}
+
+.create-account-form button:hover {
+    background-color: #b82b63;
+}
+
+/* Hidden Organization Fields */
+.hidden {
+    display: none; /* Initially hidden */
+}
+
+#organization-fields {
+    margin-top: 20px;
+    flex-basis: 100%; /* Full width when visible */
+}
+
+/* Available Pets Section */
+/* Style for the pet cards container */
+#petCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-evenly; /* Center the cards and maintain equal spacing */
+}
+
+/* Style for individual pet cards */
+.card-wrapper {
+    flex: 0 1 30%; /* Ensures each card takes up 30% of the container width */
+    margin-bottom: 20px; /* Space between rows of cards */
+}
+
+.card {
+    background-color: white;
+    border: 5px solid #ddd; /* Adjusted border width */
+    border-radius: 25px; /* Added more roundness to the corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 100%;  /* Ensures the card fills its column */
+    max-width: 25rem; /* Ensures each card has the same max width */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Style for the pet card image */
+.card-img-top {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px; /* Round the image corners */
+}
+
+/* Hover effect for the pet cards */
+.card:hover {
+    transform: scale(1.05); /* Slightly increase the size of the card */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Make the shadow more prominent */
+}
+
+/* Style for the pet card title and text */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+/* Style for the pet card button */
+.card .btn {
+    background-color: #d63384; /* Button background color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.card .btn:hover {
+    background-color: #b82b63; /* Darker button on hover */
+}
+
+/* Additional style for the "Add More Pets" button */
+.text-center .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.text-center .btn-secondary:hover {
+    background-color: #5a6268; /* Darker grey when hovered */
+}
+
+/* FAQ Section Styles */
+.faq-section {
+    padding: 30px;
+    background-color: #f6f6f6;
+}
+
+.faq-header {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.faq-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item h4 {
+    font-size: 20px;
+    color: #d63384;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    display: none; /* Hide the answer initially */
+}
+
+.faq-item.open p {
+    display: block; /* Show the answer when the item is open */
+}
+
+.faq-item.open h4::after {
+    content: "▲";
+    float: right;
+    font-size: 18px;
+}
+
+.faq-item h4::after {
+    content: "▼";
+    float: right;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+/* FAQ Toggle Button */
+.faq-toggle {
+    background-color: #d63384;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 30px auto;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.faq-toggle:hover {
+    background-color: #b82b63;
+}
